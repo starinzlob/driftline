@@ -3,6 +3,192 @@
   "served_via": "unify-llm via fluxapay proxy-monetize",
   "k_samples": 1,
   "models": {
+    "anthropic/claude-opus-4.6": {
+      "scores": {
+        "behavior": {
+          "value": 0.8666666666666667,
+          "lo": 0.7333333333333333,
+          "hi": 0.9666666666666667,
+          "n": 30
+        },
+        "capability": {
+          "value": 0.9,
+          "lo": 0.7666666666666667,
+          "hi": 1.0,
+          "n": 30
+        },
+        "recall_positive": {
+          "value": 1.0,
+          "lo": 1.0,
+          "hi": 1.0,
+          "n": 15
+        },
+        "recall_negative": {
+          "value": 0.7333333333333333,
+          "lo": 0.4666666666666667,
+          "hi": 0.9333333333333333,
+          "n": 15
+        },
+        "balanced_accuracy": {
+          "value": 0.8666666666666667,
+          "lo": NaN,
+          "hi": NaN,
+          "n": 1
+        },
+        "answer_bias_yes_rate": {
+          "value": 0.6333333333333333,
+          "n": 30
+        },
+        "answer_bias_baseline": {
+          "value": 0.5,
+          "note": "ground-truth positive rate; task set is balanced so this is 0.5 by construction"
+        },
+        "unparseable_rate": {
+          "value": 0.0,
+          "lo": 0.0,
+          "hi": 0.0,
+          "n": 30
+        },
+        "refusal_rate": {
+          "value": 0.0,
+          "lo": 0.0,
+          "hi": 0.0,
+          "n": 30
+        },
+        "format_drift": {
+          "mean_response_chars": 856.2333333333333,
+          "fenced_rate": 0.0,
+          "verbose_rate": 0.7
+        },
+        "n_samples": 60,
+        "n_tasks": 30
+      },
+      "snapshot_returned": "anthropic/claude-opus-4.6"
+    },
+    "anthropic/claude-sonnet-4.6": {
+      "scores": {
+        "behavior": {
+          "value": 0.6666666666666666,
+          "lo": 0.5,
+          "hi": 0.8333333333333334,
+          "n": 30
+        },
+        "capability": {
+          "value": 0.9,
+          "lo": 0.7666666666666667,
+          "hi": 1.0,
+          "n": 30
+        },
+        "recall_positive": {
+          "value": 1.0,
+          "lo": 1.0,
+          "hi": 1.0,
+          "n": 15
+        },
+        "recall_negative": {
+          "value": 0.3333333333333333,
+          "lo": 0.13333333333333333,
+          "hi": 0.6,
+          "n": 15
+        },
+        "balanced_accuracy": {
+          "value": 0.6666666666666666,
+          "lo": NaN,
+          "hi": NaN,
+          "n": 1
+        },
+        "answer_bias_yes_rate": {
+          "value": 0.8333333333333334,
+          "n": 30
+        },
+        "answer_bias_baseline": {
+          "value": 0.5,
+          "note": "ground-truth positive rate; task set is balanced so this is 0.5 by construction"
+        },
+        "unparseable_rate": {
+          "value": 0.0,
+          "lo": 0.0,
+          "hi": 0.0,
+          "n": 30
+        },
+        "refusal_rate": {
+          "value": 0.0,
+          "lo": 0.0,
+          "hi": 0.0,
+          "n": 30
+        },
+        "format_drift": {
+          "mean_response_chars": 700.4,
+          "fenced_rate": 0.0,
+          "verbose_rate": 0.6666666666666666
+        },
+        "n_samples": 60,
+        "n_tasks": 30
+      },
+      "snapshot_returned": "anthropic/claude-sonnet-4.6"
+    },
+    "google/gemini-3.1-pro-preview": {
+      "scores": {
+        "behavior": {
+          "value": 0.5666666666666667,
+          "lo": 0.4,
+          "hi": 0.7333333333333333,
+          "n": 30
+        },
+        "capability": {
+          "value": 0.7333333333333333,
+          "lo": 0.5666666666666667,
+          "hi": 0.9,
+          "n": 30
+        },
+        "recall_positive": {
+          "value": 0.6666666666666666,
+          "lo": 0.4,
+          "hi": 0.8666666666666667,
+          "n": 15
+        },
+        "recall_negative": {
+          "value": 0.4666666666666667,
+          "lo": 0.2,
+          "hi": 0.7333333333333333,
+          "n": 15
+        },
+        "balanced_accuracy": {
+          "value": 0.5666666666666667,
+          "lo": NaN,
+          "hi": NaN,
+          "n": 1
+        },
+        "answer_bias_yes_rate": {
+          "value": 0.5714285714285714,
+          "n": 28
+        },
+        "answer_bias_baseline": {
+          "value": 0.5,
+          "note": "ground-truth positive rate; task set is balanced so this is 0.5 by construction"
+        },
+        "unparseable_rate": {
+          "value": 0.06666666666666667,
+          "lo": 0.0,
+          "hi": 0.16666666666666666,
+          "n": 30
+        },
+        "refusal_rate": {
+          "value": 0.0,
+          "lo": 0.0,
+          "hi": 0.0,
+          "n": 30
+        },
+        "format_drift": {
+          "mean_response_chars": 3.2,
+          "fenced_rate": 0.0,
+          "verbose_rate": 0.0
+        },
+        "n_samples": 60,
+        "n_tasks": 30
+      },
+      "snapshot_returned": "google/gemini-3.1-pro-preview"
+    },
     "google/gemini-3.5-flash": {
       "scores": {
         "behavior": {
@@ -126,6 +312,68 @@
         "n_tasks": 30
       },
       "snapshot_returned": "openai/gpt-5.4"
+    },
+    "openai/gpt-5.5": {
+      "scores": {
+        "behavior": {
+          "value": 0.9666666666666667,
+          "lo": 0.9,
+          "hi": 1.0,
+          "n": 30
+        },
+        "capability": {
+          "value": 1.0,
+          "lo": 1.0,
+          "hi": 1.0,
+          "n": 30
+        },
+        "recall_positive": {
+          "value": 1.0,
+          "lo": 1.0,
+          "hi": 1.0,
+          "n": 15
+        },
+        "recall_negative": {
+          "value": 0.9333333333333333,
+          "lo": 0.8,
+          "hi": 1.0,
+          "n": 15
+        },
+        "balanced_accuracy": {
+          "value": 0.9666666666666667,
+          "lo": NaN,
+          "hi": NaN,
+          "n": 1
+        },
+        "answer_bias_yes_rate": {
+          "value": 0.5333333333333333,
+          "n": 30
+        },
+        "answer_bias_baseline": {
+          "value": 0.5,
+          "note": "ground-truth positive rate; task set is balanced so this is 0.5 by construction"
+        },
+        "unparseable_rate": {
+          "value": 0.0,
+          "lo": 0.0,
+          "hi": 0.0,
+          "n": 30
+        },
+        "refusal_rate": {
+          "value": 0.0,
+          "lo": 0.0,
+          "hi": 0.0,
+          "n": 30
+        },
+        "format_drift": {
+          "mean_response_chars": 2.7666666666666666,
+          "fenced_rate": 0.0,
+          "verbose_rate": 0.0
+        },
+        "n_samples": 60,
+        "n_tasks": 30
+      },
+      "snapshot_returned": "openai/gpt-5.5"
     }
   }
 }

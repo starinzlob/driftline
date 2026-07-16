@@ -51,8 +51,14 @@ def main() -> None:
     samp = cfg["sampling"]
     para_idx = [int(x) for x in args.paraphrases.split(",")]
 
-    wanted = set(x.strip() for x in args.models.split(",") if x.strip())
-    models = [m for m in cfg["models"] if not wanted or m["alias"] in wanted]
+    wanted = [x.strip() for x in args.models.split(",") if x.strip()]
+    by_alias = {m["alias"]: m for m in cfg["models"]}
+    if wanted:
+        # Honour the caller's order (lets us run cheapest-first to secure the
+        # affordable data before spending on the expensive tier).
+        models = [by_alias[a] for a in wanted if a in by_alias]
+    else:
+        models = list(cfg["models"])
     tasks = load_tasks()
 
     run_dir = REPO / "runs" / args.date
