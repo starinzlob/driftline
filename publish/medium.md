@@ -71,7 +71,7 @@ behind one phrasing and reappears behind another has drifted in behavior, not de
 So driftline reports two numbers, always together:
 
 - **behavior** — accuracy on the single terse prompt you actually type every day.
-- **capability** — best-of-N across several frozen paraphrases.
+- **capability** — best paraphrase’s mean accuracy over samples.
 
 Behavior falling while capability holds is *behavior drift*, and it must be reported with
 those words. Only both falling together earns the word "degradation."
@@ -102,10 +102,12 @@ An honest instrument leads with its spec sheet.
 - **It's a baseline, not a drift measurement.** One time point cannot show drift; that
   needs the run to repeat over months. I am not claiming any model got worse. I'm
   claiming here is an instrument that could tell, and here is what it reads on day one.
-- **The capability metric saturates.** Best-of-N pins to 100% for any competent model, so
-  right now it's trustworthy as evidence a capability is *intact* and nearly worthless as
-  evidence one is *lost*. This is a real defect, documented in the repo, not an issue I'm
-  hiding until someone finds it.
+- **The capability metric had to be de-saturated.** My first definition (best-of-N over
+  paraphrases and samples) pinned to 100% for any competent model and couldn't detect the
+  degradation it exists to detect. I caught it, redefined capability as the best
+  paraphrase's mean accuracy over samples, and re-scored. It now has resolution below
+  100% for the k≥2 tier — though at k=1 (the frontier models this run) it still behaves
+  like the old max. That whole exchange is in the changelog, which is the point.
 - **It's proxy-served.** All the models are reached through one OpenAI-compatible proxy,
   so any routing or caching the proxy introduces is invisible and gets attributed to
   nothing. I measure the model as served, and say so on every result.

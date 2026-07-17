@@ -32,7 +32,7 @@ It measured politeness. Fix: extract the answer, grade its meaning, not its form
 So the tool reports two numbers, never one:
 
 • behavior = accuracy on the terse prompt you actually type
-• capability = best-of-N once the model is allowed to reason
+• capability = best phrasing’s reliability once it can reason
 
 Only both falling together is degradation. Behavior alone falling is a different story.
 

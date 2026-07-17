@@ -35,7 +35,7 @@ It's built to not repeat the two mistakes that sank the 2023 paper:
 There are no LLM judges anywhere — a judge that drifts can't measure drift, so every
 grader is deterministic code with unit tests. Two of those tests are regressions against
 the exact 2023 bugs. It also reports two separate numbers: `behavior` (accuracy on the
-terse prompt you actually type) and `capability` (best-of-N across frozen paraphrases).
+terse prompt you actually type) and `capability` (best paraphrase's reliability).
 Only both falling together may be called degradation.
 
 First baseline, 10 models, 2026-07-16 — and the 2023 confound shows up live: gpt-5.4 and
@@ -53,7 +53,9 @@ is pre-registered before data collection, the graders are deterministic and unit
 and every raw response is in git so anyone who distrusts the authorship can re-score the
 whole history without my cooperation. Please do.
 
-Known limits are in the repo, including one I already know is broken (the capability
-metric saturates and can't yet detect the degradation it exists to detect).
+Known limits are in the repo and I lead with them: the frontier tier is k=1 (no
+confidence intervals), coverage this run is deepseek-only on the open-weight side
+(two providers' upstreams were down), and I document a capability metric I already
+had to de-saturate once — the bugs I caught in my own graders are in the changelog.
 
 Repo: https://github.com/starinzlob/driftline
