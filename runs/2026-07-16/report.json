@@ -1,7 +1,7 @@
 {
   "date": "2026-07-16",
   "served_via": "unify-llm via fluxapay proxy-monetize",
-  "k_samples": 1,
+  "k_samples": 3,
   "models": {
     "anthropic/claude-opus-4.6": {
       "scores": {
@@ -126,6 +126,254 @@
         "n_tasks": 30
       },
       "snapshot_returned": "anthropic/claude-sonnet-4.6"
+    },
+    "deepseek-v3.2": {
+      "scores": {
+        "behavior": {
+          "value": 0.87248322147651,
+          "lo": 0.8187919463087249,
+          "hi": 0.9194630872483222,
+          "n": 149
+        },
+        "capability": {
+          "value": 1.0,
+          "lo": 1.0,
+          "hi": 1.0,
+          "n": 30
+        },
+        "recall_positive": {
+          "value": 0.9866666666666667,
+          "lo": 0.96,
+          "hi": 1.0,
+          "n": 75
+        },
+        "recall_negative": {
+          "value": 0.7567567567567568,
+          "lo": 0.6486486486486487,
+          "hi": 0.8513513513513513,
+          "n": 74
+        },
+        "balanced_accuracy": {
+          "value": 0.8717117117117117,
+          "lo": NaN,
+          "hi": NaN,
+          "n": 1
+        },
+        "answer_bias_yes_rate": {
+          "value": 0.6174496644295302,
+          "n": 149
+        },
+        "answer_bias_baseline": {
+          "value": 0.5033557046979866,
+          "note": "ground-truth positive rate; task set is balanced so this is 0.5 by construction"
+        },
+        "unparseable_rate": {
+          "value": 0.0,
+          "lo": 0.0,
+          "hi": 0.0,
+          "n": 149
+        },
+        "refusal_rate": {
+          "value": 0.0,
+          "lo": 0.0,
+          "hi": 0.0,
+          "n": 149
+        },
+        "format_drift": {
+          "mean_response_chars": 1491.993288590604,
+          "fenced_rate": 0.0,
+          "verbose_rate": 0.8322147651006712
+        },
+        "n_samples": 299,
+        "n_tasks": 30
+      },
+      "snapshot_returned": "deepseek-v3.2"
+    },
+    "deepseek-v3.2-think": {
+      "scores": {
+        "behavior": {
+          "value": 0.8518518518518519,
+          "lo": 0.7777777777777778,
+          "hi": 0.9166666666666666,
+          "n": 108
+        },
+        "capability": {
+          "value": 1.0,
+          "lo": 1.0,
+          "hi": 1.0,
+          "n": 30
+        },
+        "recall_positive": {
+          "value": 0.9152542372881356,
+          "lo": 0.847457627118644,
+          "hi": 0.9830508474576272,
+          "n": 59
+        },
+        "recall_negative": {
+          "value": 0.7755102040816326,
+          "lo": 0.6530612244897959,
+          "hi": 0.8979591836734694,
+          "n": 49
+        },
+        "balanced_accuracy": {
+          "value": 0.8453822206848841,
+          "lo": NaN,
+          "hi": NaN,
+          "n": 1
+        },
+        "answer_bias_yes_rate": {
+          "value": 0.6018518518518519,
+          "n": 108
+        },
+        "answer_bias_baseline": {
+          "value": 0.5462962962962963,
+          "note": "ground-truth positive rate; task set is balanced so this is 0.5 by construction"
+        },
+        "unparseable_rate": {
+          "value": 0.0,
+          "lo": 0.0,
+          "hi": 0.0,
+          "n": 108
+        },
+        "refusal_rate": {
+          "value": 0.0,
+          "lo": 0.0,
+          "hi": 0.0,
+          "n": 108
+        },
+        "format_drift": {
+          "mean_response_chars": 11.453703703703704,
+          "fenced_rate": 0.0,
+          "verbose_rate": 0.0
+        },
+        "n_samples": 238,
+        "n_tasks": 30
+      },
+      "snapshot_returned": "deepseek-v3.2-think"
+    },
+    "deepseek-v4-flash": {
+      "scores": {
+        "behavior": {
+          "value": 0.6533333333333333,
+          "lo": 0.58,
+          "hi": 0.7266666666666667,
+          "n": 150
+        },
+        "capability": {
+          "value": 1.0,
+          "lo": 1.0,
+          "hi": 1.0,
+          "n": 30
+        },
+        "recall_positive": {
+          "value": 1.0,
+          "lo": 1.0,
+          "hi": 1.0,
+          "n": 75
+        },
+        "recall_negative": {
+          "value": 0.30666666666666664,
+          "lo": 0.21333333333333335,
+          "hi": 0.41333333333333333,
+          "n": 75
+        },
+        "balanced_accuracy": {
+          "value": 0.6533333333333333,
+          "lo": NaN,
+          "hi": NaN,
+          "n": 1
+        },
+        "answer_bias_yes_rate": {
+          "value": 0.8466666666666667,
+          "n": 150
+        },
+        "answer_bias_baseline": {
+          "value": 0.5,
+          "note": "ground-truth positive rate; task set is balanced so this is 0.5 by construction"
+        },
+        "unparseable_rate": {
+          "value": 0.0,
+          "lo": 0.0,
+          "hi": 0.0,
+          "n": 150
+        },
+        "refusal_rate": {
+          "value": 0.0,
+          "lo": 0.0,
+          "hi": 0.0,
+          "n": 150
+        },
+        "format_drift": {
+          "mean_response_chars": 120.06,
+          "fenced_rate": 0.0,
+          "verbose_rate": 0.013333333333333334
+        },
+        "n_samples": 300,
+        "n_tasks": 30
+      },
+      "snapshot_returned": "deepseek-v4-flash"
+    },
+    "deepseek-v4-pro": {
+      "scores": {
+        "behavior": {
+          "value": 0.8596491228070176,
+          "lo": 0.7719298245614035,
+          "hi": 0.9473684210526315,
+          "n": 57
+        },
+        "capability": {
+          "value": 1.0,
+          "lo": 1.0,
+          "hi": 1.0,
+          "n": 19
+        },
+        "recall_positive": {
+          "value": 1.0,
+          "lo": 1.0,
+          "hi": 1.0,
+          "n": 30
+        },
+        "recall_negative": {
+          "value": 0.7037037037037037,
+          "lo": 0.5185185185185185,
+          "hi": 0.8518518518518519,
+          "n": 27
+        },
+        "balanced_accuracy": {
+          "value": 0.8518518518518519,
+          "lo": NaN,
+          "hi": NaN,
+          "n": 1
+        },
+        "answer_bias_yes_rate": {
+          "value": 0.6666666666666666,
+          "n": 57
+        },
+        "answer_bias_baseline": {
+          "value": 0.5263157894736842,
+          "note": "ground-truth positive rate; task set is balanced so this is 0.5 by construction"
+        },
+        "unparseable_rate": {
+          "value": 0.0,
+          "lo": 0.0,
+          "hi": 0.0,
+          "n": 57
+        },
+        "refusal_rate": {
+          "value": 0.0,
+          "lo": 0.0,
+          "hi": 0.0,
+          "n": 57
+        },
+        "format_drift": {
+          "mean_response_chars": 14.982456140350877,
+          "fenced_rate": 0.0,
+          "verbose_rate": 0.0
+        },
+        "n_samples": 113,
+        "n_tasks": 19
+      },
+      "snapshot_returned": "deepseek-v4-pro"
     },
     "google/gemini-3.1-pro-preview": {
       "scores": {

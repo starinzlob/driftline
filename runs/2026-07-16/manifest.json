@@ -5,20 +5,17 @@
   "sampling": {
     "temperature": 0,
     "top_p": 1,
-    "max_tokens": 1024,
-    "k_samples": 1,
+    "max_tokens": 4096,
+    "k_samples": 3,
     "timeout_s": 60,
     "request_seed": 20260715
   },
   "paraphrases": [
     0,
-    1
+    2
   ],
   "models": [
-    "anthropic/claude-sonnet-4.6",
-    "google/gemini-3.1-pro-preview",
-    "openai/gpt-5.5",
-    "anthropic/claude-opus-4.6"
+    "deepseek-v4-pro"
   ],
   "n_tasks": 30
 }
